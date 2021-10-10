@@ -103,7 +103,16 @@ def show(N, x0, xend, step, interpolated, interpolatedChebyshev, truevalues):
     plt.show()
 
 
-def main():
+def main1():
+    N = 7
+    x0 = 0
+    xend = 10
+    step = 0.001
+    interpolated, interpolatedChebyshev, truevalues, lebConst, lebConstChebyshev = interpolate(N, x0, xend, step)
+    show(N, x0, xend, step, interpolated, interpolatedChebyshev, truevalues)
+
+
+def main2():
 
     Nrange = range(2, 101)
     x0 = 0
@@ -162,4 +171,4 @@ def main():
     #show(N, x0, xend, step, interpolated, interpolatedChebyshev, truevalues)
 
 
-main()
+main2()
